@@ -23,3 +23,8 @@ The problem contains two requirements:
 Let us first deal with the 2nd requirement. Suppose L <= K, the answer should be N * (N - 1) * (N - 2) * ... * (N - L + 1). When L > K, for each new position, we will be able to reuse one of the songs in the first K places, but to fill the position, a song will be used and get blocked for another K period. Thus after L > K, we always have (N - K) options for each position, which means the answer should be N * (N - 1) * (N - 2) * ... * (N - K + 1) * (N - K)^(L - K).
 
 Then for the first requirement, we use inclusion-exclusion principle. The idea is: # of arrangements using all N songs = # of arrangements using <= N songs - (N choose N - 1) * # of arrangements using <= (N - 1) songs + (N choose N - 2) * # of arrangements using <= (N - 2) songs + ...
+
+---------------------
+Editing to see how PR works here
+---------------------
+How about now?
